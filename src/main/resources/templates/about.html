@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #page-static-resources},
+                                                ~{:: #page-nav},
+                                                ~{:: #page-main-content},
+                                               )}">
+
+<head>
+    <title>About!</title>
+</head>
+<body>
+    <div id="page-nav" th:replace="~{/fragments/app-fragments :: nav-admin}"></div>
+    <div id="page-main-content">
+
+        <div class="row">
+            <div class="col-sm-12" className="bloc" >
+                <h2>About</h2>
+
+                <h3 id="reference-documentation">Spring boot Samples App.</h3>
+                <ul>
+                    <li>Spring boot - REST API</li>
+                    <li>Spring boot - JPA (H2) <a href="./h2-console">console</a></li>
+
+                    <li>Spring boot - Web</li>
+                    <li>Spring boot - Thymeleaf (Templates Engine)</li>
+
+<!--                    <li>Spring boot - REST-assured (REST APIs : Testing + Validation)</li>-->
+<!--                    <li>Spring boot - JUnit5 - Mockito Tests</li>-->
+                </ul>
+
+<!--                <h3 id="reference-documentation">Reference Documentation</h3>-->
+<!--                <p>For further reference, please consider the following sections:</p>-->
+<!--                <ul>-->
+<!--                    <li><a href="https://maven.apache.org/guides/index.html">Official Apache Maven documentation</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/maven-plugin/reference/html/">Spring Boot Maven Plugin Reference Guide</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/maven-plugin/reference/html/#build-image">Create an OCI image</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#howto-use-exposing-spring-data-repositories-rest-endpoint">Rest Repositories</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-developing-web-applications">Spring Web</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#using-boot-devtools">Spring Boot DevTools</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-security">Spring Security</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-spring-mvc-template-engines">Thymeleaf</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-mongodb">Spring Data MongoDB</a></li>-->
+<!--                    <li><a href="https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-features-websockets">WebSocket</a></li>-->
+<!--                </ul>-->
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <th:block id="page-static-resources">
+        <script th:src="@{/js/main.js}"></script>
+    </th:block>
+</body>
+</html>

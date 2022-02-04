@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #page-static-resources},
+                                                ~{:: #page-nav},
+                                                ~{:: #page-main-content},
+                                               )}">
+<head>
+    <title>Index</title>
+</head>
+<body>
+<!--<div id="page-nav" th:replace="~{/fragments/app-fragments :: nav-default}"></div>-->
+
+<div id="page-main-content">
+    <div class="row">
+        <div class="col-sm-12" className="bloc" >
+
+            <h2>Spring Boot : Error!</h2>
+            <div class="alert alert-warning">
+                <b>[<span th:text="${status}">status</span>]
+                    <span th:text="${error}">error</span>
+                </b>
+                <p th:text="${message}"></p>
+                <a href="/">Home</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<th:block id="page-static-resources">
+    <script>
+        $(function(){
+            scroll_handle();
+        });
+
+        function scroll_handle(){
+            const debounce = (fn) => {
+                let frame;
+                return (...params) => {
+                    if (frame) {
+                        cancelAnimationFrame(frame);
+                    }
+                    frame = requestAnimationFrame(() => {
+                        fn(...params);
+                    });
+
+                }
+            };
+            const storeScroll = () => {
+                document.documentElement.dataset.scroll = window.scrollY;
+            }
+            document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+            storeScroll();
+        }
+    </script>
+</th:block>
+</body>
+</html>

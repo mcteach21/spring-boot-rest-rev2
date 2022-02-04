@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/main-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #page-static-resources},
+                                                ~{:: #page-nav},
+                                                ~{:: #page-main-content},
+                                               )}">
+<head>
+    <title>Spring - Rest</title>
+</head>
+<body>
+<div id="page-nav" th:replace="~{/fragments/app-fragments :: nav-default}"></div>
+
+<div id="page-main-content">
+    <div class="row">
+        <div class="col-sm-12" className="bloc alert alert-success" >
+
+            <p>
+                Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run".
+                <br/>We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss.
+                <br/>Most Spring Boot applications need minimal Spring configuration.
+            </p>
+
+            <h3>Features</h3>
+            <ul>
+                <li>Create stand-alone Spring applications </li>
+                <li>Embed Tomcat, Jetty or Undertow directly (no need to deploy WAR files)</li>
+                <li>Provide opinionated 'starter' dependencies to simplify your build configuration</li>
+                <li>Automatically configure Spring and 3rd party libraries whenever possible</li>
+                <li>Provide production-ready features such as metrics, health checks, and externalized configuration</li>
+                <li> Absolutely no code generation and no requirement for XML configuration</li>
+            </ul>
+
+            <a href="https://spring.io/projects/spring-boot#overview">spring.io</a>
+        </div>
+    </div>
+</div>
+
+
+<th:block id="page-static-resources">
+    <script th:src="@{/js/main.js}"></script>
+</th:block>
+</body>
+</html>
