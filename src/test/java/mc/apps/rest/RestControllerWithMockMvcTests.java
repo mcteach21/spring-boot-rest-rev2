@@ -1,10 +1,8 @@
 package mc.apps.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import mc.apps.rest.repositories.User;
-import mc.apps.rest.repositories.UserRepository;
+import mc.apps.rest.modele.User;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc // ==> for MockMvc !
-class SpringBootRestWithMockMvcTests {
+class RestControllerWithMockMvcTests {
 
     @Autowired
     MockMvc mvc;

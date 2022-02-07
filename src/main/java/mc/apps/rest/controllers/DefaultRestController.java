@@ -1,8 +1,7 @@
 package mc.apps.rest.controllers;
 
-import mc.apps.rest.repositories.User;
+import mc.apps.rest.modele.User;
 import mc.apps.rest.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

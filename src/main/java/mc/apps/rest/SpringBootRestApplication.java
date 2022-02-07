@@ -1,6 +1,6 @@
 package mc.apps.rest;
 
-import mc.apps.rest.repositories.User;
+import mc.apps.rest.modele.User;
 import mc.apps.rest.repositories.UserRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

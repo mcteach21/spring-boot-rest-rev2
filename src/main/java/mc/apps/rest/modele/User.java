@@ -1,4 +1,4 @@
-package mc.apps.rest.repositories;
+package mc.apps.rest.modele;
 
 import javax.persistence.*;
 
@@ -20,6 +20,7 @@ public class User {
     }
 
     public User(String firstName, String lastName) {
+        this.id=0L;
         this.firstName = firstName;
         this.lastName = lastName;
     }
