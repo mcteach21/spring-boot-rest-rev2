@@ -11,11 +11,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-public class DefaultController {
+public class DefaultRestController {
 
     // Inject repository
     final UserRepository userRepository;
-    public DefaultController(UserRepository userRepository) {
+    public DefaultRestController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
