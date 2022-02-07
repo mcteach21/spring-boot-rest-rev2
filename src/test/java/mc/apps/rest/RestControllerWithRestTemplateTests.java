@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class RestTemplateTests {
+public class RestControllerWithRestTemplateTests {
 
     @LocalServerPort
     private int port;
