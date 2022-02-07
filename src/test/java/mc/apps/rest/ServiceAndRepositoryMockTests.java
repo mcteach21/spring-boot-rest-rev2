@@ -26,7 +26,6 @@ public class ServiceAndRepositoryMockTests {
     @InjectMocks
     UserService userService = new UserServiceImpl();
 
-
     List<User> items = Arrays.asList(new User("John","Doe"), new User("Jane","Doe"));
     @BeforeEach
     public void initRepositoryMockReturn(){
