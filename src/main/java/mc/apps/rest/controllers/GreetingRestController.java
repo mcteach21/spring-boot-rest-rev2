@@ -14,7 +14,6 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 @RestController
 public class GreetingRestController {
 
-
     @GetMapping("/rest/greeting")
     public HttpEntity<Greeting> getGreeting(@RequestParam(value = "name", defaultValue = "World") String name){
 
